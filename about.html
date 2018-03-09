@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>about page</title>
+   <style>
+      .about-container {
+         width: 300px;
+         height: 300px;
+         border: darkgreen 1px solid;
+         font-size: 30px;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <video id="test" width="500" height="400" >
+         <source src="test.mp4" type="video/mp4">
+      </video>
+   </div>
+   <canvas height="400" width="500" id="canvas2" style="border:1px solid #000;margin: 50px;"></canvas>
+   <canvas height="400" width="500" id="canvas1" style="border:1px solid #000;margin: 50px;display: none;"></canvas>
+   <button type="button" onclick="drawImg()">click</button>
+   <script>
+      const video = document.getElementById('test');
+      const canvas1 = document.getElementById('canvas1');
+      const canvas2 = document.getElementById('canvas2');
+      const context1 = canvas1.getContext('2d');
+      const context2 = canvas2.getContext('2d');
+      function drawVideo() {
+         context1.drawImage(video,0,0,video.width,video.height);
+      }
+      function drawImg() {
+         context2.drawImage(canvas1,0,0,canvas1.width,canvas1.height)
+      }
+      video.play();
+      setInterval(drawVideo,100);
+   </script>
+</body>
+
+</html>

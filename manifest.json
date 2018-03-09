@@ -1,0 +1,15 @@
+{
+   "name": "Progressive Times web app",
+   "short_name": "Progressive Times",
+   "start_url": "/index.html",
+   "display": "standalone",
+   "theme_color": "#c532bb",
+   "background_color": "#FFDF00",
+   "icons": [
+      {
+         "src": "icon.png",
+         "sizes": "144x144",
+         "type": "image/png"
+      }
+   ]
+}

@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>mjzhang1993</title>
+   <title>index page</title>
+   <link rel="manifest" href="/manifest.json" />
+   <style>
+      body {
+         position: absolute;
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .box {
+         width: 300px;
+         height: 300px;
+         border: 1px solid darkgreen;
+      }
+   </style>
 </head>
+
 <body>
-   this is mjzhang1993 page
+   <div class="box">
+      this is box xxx
+      <div id="details"></div>
+      <a href="./about.html">about page</a>
+      <button id="btn"> click to add to client</button>
+   </div>
+   <script src="./index.js"></script>
 </body>
+
 </html>
